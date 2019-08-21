@@ -1,0 +1,156 @@
+=============================== ('1k_tweets.txt', '1k_labels.txt')
+MLPClassifier(activation='relu', alpha=0.0001, batch_size='auto', beta_1=0.9,
+       beta_2=0.999, early_stopping=False, epsilon=1e-08,
+       hidden_layer_sizes=(100,), learning_rate='constant',
+       learning_rate_init=0.001, max_iter=200, momentum=0.9,
+       nesterovs_momentum=True, power_t=0.5, random_state=None,
+       shuffle=True, solver='adam', tol=0.0001, validation_fraction=0.1,
+       verbose=False, warm_start=False)
+1k_tweets.txt
+Range:  0 100
+accuracy:  1.0
+Range:  100 200
+accuracy:  1.0
+Range:  200 300
+accuracy:  1.0
+Range:  300 400
+accuracy:  1.0
+Range:  400 500
+accuracy:  1.0
+Range:  500 600
+accuracy:  0.99
+Range:  600 700
+accuracy:  1.0
+Range:  700 800
+accuracy:  0.99
+Range:  800 900
+accuracy:  1.0
+Range:  900 1000
+accuracy:  1.0
+training time 56.3150000572
+elapsed time 0.0260000228882
+=============================== ('5k_tweets.txt', '5k_labels.txt')
+MLPClassifier(activation='relu', alpha=0.0001, batch_size='auto', beta_1=0.9,
+       beta_2=0.999, early_stopping=False, epsilon=1e-08,
+       hidden_layer_sizes=(100,), learning_rate='constant',
+       learning_rate_init=0.001, max_iter=200, momentum=0.9,
+       nesterovs_momentum=True, power_t=0.5, random_state=None,
+       shuffle=True, solver='adam', tol=0.0001, validation_fraction=0.1,
+       verbose=False, warm_start=False)
+5k_tweets.txt
+Range:  0 100
+accuracy:  1.0
+Range:  100 200
+accuracy:  1.0
+Range:  200 300
+accuracy:  1.0
+Range:  300 400
+accuracy:  1.0
+Range:  400 500
+accuracy:  1.0
+Range:  500 600
+accuracy:  0.99
+Range:  600 700
+accuracy:  1.0
+Range:  700 800
+accuracy:  0.99
+Range:  800 900
+accuracy:  0.99
+Range:  900 1000
+accuracy:  1.0
+training time 435.316999912
+elapsed time 0.105000019073
+=============================== ('10k_tweets.txt', '10k_labels.txt')
+MLPClassifier(activation='relu', alpha=0.0001, batch_size='auto', beta_1=0.9,
+       beta_2=0.999, early_stopping=False, epsilon=1e-08,
+       hidden_layer_sizes=(100,), learning_rate='constant',
+       learning_rate_init=0.001, max_iter=200, momentum=0.9,
+       nesterovs_momentum=True, power_t=0.5, random_state=None,
+       shuffle=True, solver='adam', tol=0.0001, validation_fraction=0.1,
+       verbose=False, warm_start=False)
+10k_tweets.txt
+Range:  0 100
+accuracy:  1.0
+Range:  100 200
+accuracy:  1.0
+Range:  200 300
+accuracy:  1.0
+Range:  300 400
+accuracy:  1.0
+Range:  400 500
+accuracy:  1.0
+Range:  500 600
+accuracy:  0.99
+Range:  600 700
+accuracy:  1.0
+Range:  700 800
+accuracy:  0.99
+Range:  800 900
+accuracy:  1.0
+Range:  900 1000
+accuracy:  1.0
+training time 1506.81900001
+elapsed time 0.25
+=============================== ('20k_tweets.txt', '20k_labels.txt')
+MLPClassifier(activation='relu', alpha=0.0001, batch_size='auto', beta_1=0.9,
+       beta_2=0.999, early_stopping=False, epsilon=1e-08,
+       hidden_layer_sizes=(100,), learning_rate='constant',
+       learning_rate_init=0.001, max_iter=200, momentum=0.9,
+       nesterovs_momentum=True, power_t=0.5, random_state=None,
+       shuffle=True, solver='adam', tol=0.0001, validation_fraction=0.1,
+       verbose=False, warm_start=False)
+20k_tweets.txt
+Range:  0 100
+accuracy:  1.0
+Range:  100 200
+accuracy:  1.0
+Range:  200 300
+accuracy:  1.0
+Range:  300 400
+accuracy:  0.99
+Range:  400 500
+accuracy:  1.0
+Range:  500 600
+accuracy:  0.99
+Range:  600 700
+accuracy:  1.0
+Range:  700 800
+accuracy:  0.98
+Range:  800 900
+accuracy:  1.0
+Range:  900 1000
+accuracy:  1.0
+training time 10349.0320001
+elapsed time 0.150000095367
+=============================== ('30k_tweets.txt', '30k_labels.txt')
+MLPClassifier(activation='relu', alpha=0.0001, batch_size='auto', beta_1=0.9,
+       beta_2=0.999, early_stopping=False, epsilon=1e-08,
+       hidden_layer_sizes=(100,), learning_rate='constant',
+       learning_rate_init=0.001, max_iter=200, momentum=0.9,
+       nesterovs_momentum=True, power_t=0.5, random_state=None,
+       shuffle=True, solver='adam', tol=0.0001, validation_fraction=0.1,
+       verbose=False, warm_start=False)
+30k_tweets.txt
+Range:  0 100
+accuracy:  0.96
+Range:  100 200
+accuracy:  0.95
+Range:  200 300
+accuracy:  0.92
+Range:  300 400
+accuracy:  0.95
+Range:  400 500
+accuracy:  0.95
+Range:  500 600
+accuracy:  0.97
+Range:  600 700
+accuracy:  0.95
+Range:  700 800
+accuracy:  0.95
+Range:  800 900
+accuracy:  0.94
+Range:  900 1000
+accuracy:  0.96
+training time 1269.93900013
+elapsed time 0.139000177383
+=============================== ('40k_tweets.txt', '40k_labels.txt')

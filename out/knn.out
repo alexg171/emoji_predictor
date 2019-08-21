@@ -1,0 +1,168 @@
+=============================== ('1k_tweets.txt', '1k_labels.txt')
+1k_tweets.txt
+Range:  0 100
+accuracy:  0.32
+Range:  100 200
+accuracy:  0.35
+Range:  200 300
+accuracy:  0.31
+Range:  300 400
+accuracy:  0.44
+Range:  400 500
+accuracy:  0.37
+Range:  500 600
+accuracy:  0.35
+Range:  600 700
+accuracy:  0.43
+Range:  700 800
+accuracy:  0.37
+Range:  800 900
+accuracy:  0.43
+Range:  900 1000
+accuracy:  0.33
+training time 0.0
+elapsed time 0.239000082016
+=============================== ('5k_tweets.txt', '5k_labels.txt')
+5k_tweets.txt
+Range:  0 100
+accuracy:  0.31
+Range:  100 200
+accuracy:  0.38
+Range:  200 300
+accuracy:  0.31
+Range:  300 400
+accuracy:  0.44
+Range:  400 500
+accuracy:  0.44
+Range:  500 600
+accuracy:  0.39
+Range:  600 700
+accuracy:  0.41
+Range:  700 800
+accuracy:  0.34
+Range:  800 900
+accuracy:  0.37
+Range:  900 1000
+accuracy:  0.47
+training time 0.0
+elapsed time 0.590000152588
+=============================== ('10k_tweets.txt', '10k_labels.txt')
+10k_tweets.txt
+Range:  0 100
+accuracy:  0.31
+Range:  100 200
+accuracy:  0.41
+Range:  200 300
+accuracy:  0.36
+Range:  300 400
+accuracy:  0.46
+Range:  400 500
+accuracy:  0.33
+Range:  500 600
+accuracy:  0.35
+Range:  600 700
+accuracy:  0.43
+Range:  700 800
+accuracy:  0.35
+Range:  800 900
+accuracy:  0.39
+Range:  900 1000
+accuracy:  0.4
+training time 0.0
+elapsed time 1.13800001144
+=============================== ('20k_tweets.txt', '20k_labels.txt')
+20k_tweets.txt
+Range:  0 100
+accuracy:  0.36
+Range:  100 200
+accuracy:  0.42
+Range:  200 300
+accuracy:  0.35
+Range:  300 400
+accuracy:  0.49
+Range:  400 500
+accuracy:  0.29
+Range:  500 600
+accuracy:  0.38
+Range:  600 700
+accuracy:  0.42
+Range:  700 800
+accuracy:  0.41
+Range:  800 900
+accuracy:  0.35
+Range:  900 1000
+accuracy:  0.43
+training time 0.0160000324249
+elapsed time 2.22600007057
+=============================== ('30k_tweets.txt', '30k_labels.txt')
+30k_tweets.txt
+Range:  0 100
+accuracy:  0.36
+Range:  100 200
+accuracy:  0.42
+Range:  200 300
+accuracy:  0.36
+Range:  300 400
+accuracy:  0.54
+Range:  400 500
+accuracy:  0.32
+Range:  500 600
+accuracy:  0.39
+Range:  600 700
+accuracy:  0.41
+Range:  700 800
+accuracy:  0.46
+Range:  800 900
+accuracy:  0.32
+Range:  900 1000
+accuracy:  0.45
+training time 0.0199999809265
+elapsed time 3.23399996758
+=============================== ('40k_tweets.txt', '40k_labels.txt')
+40k_tweets.txt
+Range:  0 100
+accuracy:  0.35
+Range:  100 200
+accuracy:  0.48
+Range:  200 300
+accuracy:  0.4
+Range:  300 400
+accuracy:  0.48
+Range:  400 500
+accuracy:  0.4
+Range:  500 600
+accuracy:  0.41
+Range:  600 700
+accuracy:  0.39
+Range:  700 800
+accuracy:  0.39
+Range:  800 900
+accuracy:  0.32
+Range:  900 1000
+accuracy:  0.45
+training time 0.0310001373291
+elapsed time 3.95699977875
+=============================== ('tweets_us.json.text', 'tweets_us.json.labels')
+tweets_us.json.text
+Range:  0 100
+accuracy:  0.33
+Range:  100 200
+accuracy:  0.47
+Range:  200 300
+accuracy:  0.4
+Range:  300 400
+accuracy:  0.51
+Range:  400 500
+accuracy:  0.4
+Range:  500 600
+accuracy:  0.32
+Range:  600 700
+accuracy:  0.39
+Range:  700 800
+accuracy:  0.35
+Range:  800 900
+accuracy:  0.3
+Range:  900 1000
+accuracy:  0.5
+training time 0.0310001373291
+elapsed time 4.59100008011
