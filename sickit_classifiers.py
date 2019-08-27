@@ -1,4 +1,9 @@
+# standard library
+import sys
+import time
+# numpy
 import numpy as np
+# scikit imports
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.naive_bayes import MultinomialNB
@@ -10,31 +15,19 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn import metrics
-from sklearn.externals import joblib
-import time
+import joblib
 
-#usdata = '1k_tweets.txt'
-#uslabel = '1k_labels.txt'
-# usdata = '5k_tweets.txt'
-# uslabel = '5k_labels.txt'
-# usdata = '10k_tweets.txt'
-# uslabel = '10k_labels.txt'
-# usdata = '20k_tweets.txt'
-# uslabel = '20k_labels.txt'
-# usdata = '30k_tweets.txt'
-# uslabel = '30k_labels.txt'
-# usdata = '40k_tweets.txt'
-# uslabel = '40k_labels.txt'
-# usdata = 'tweets_us.json.text'
-# uslabel = 'tweets_us.json.labels'
 
 def test(usdata,uslabel):
-    a = open(usdata)
-    b = open(uslabel)
-    c = open(usdata)
+    a = open(usdata, encoding="utf8")
+    b = open(uslabel, encoding="utf8")
+    c = open(usdata, encoding="utf8")
 
     count_vect = CountVectorizer()
     X_train_counts = count_vect.fit_transform(a)
+
+    print("***********************")
+    print("Count")
 
     tfidf_transformer = TfidfTransformer()
     X_train_tfidf = tfidf_transformer.fit_transform(X_train_counts)
@@ -60,25 +53,25 @@ def test(usdata,uslabel):
     for line in c.readlines():
         test.append(line.strip())
 
-    print clf
-    print usdata
+    print(clf)
+    print(usdata)
     start_t = time.time()
 
     for i in range(10):
         start = i*100
         end = start + 100
-        print "Range: ", start, end
+        print("Range: ", start, end)
         docs_test = test[start:end]
         target_test = target[start:end]
         X_new_counts = count_vect.transform(docs_test)
         X_new_tfidf = tfidf_transformer.transform(X_new_counts)
         predicted = clf.predict(X_new_tfidf)
-        print "accuracy: ", np.mean(predicted == target_test)
+        print("accuracy: ", np.mean(predicted == target_test))
     
     end_t = time.time()
     elapsed = end_t - start_t
-    print "training time", trainingtime
-    print "elapsed time", elapsed
+    print("training time", trainingtime)
+    print("elapsed time", elapsed)
     # X_new_counts = count_vect.transform(docs_test)
     # X_new_tfidf = tfidf_transformer.transform(X_new_counts)
 
@@ -98,12 +91,16 @@ def test(usdata,uslabel):
     # print "accuracy Decision Tree: ", np.mean(predicted6 == target_test)
     # print "accuracy Neural Networks: ", np.mean(predicted7 == target_test)
 
-datalabelpairs = [ ('1k_tweets.txt','1k_labels.txt'),('5k_tweets.txt','5k_labels.txt'),('10k_tweets.txt','10k_labels.txt'),('20k_tweets.txt','20k_labels.txt'),('30k_tweets.txt','30k_labels.txt'),('40k_tweets.txt','40k_labels.txt'),('tweets_us.json.text','tweets_us.json.labels')]
+#datalabelpairs = [ ('1k_tweets.txt','1k_labels.txt')]#,('5k_tweets.txt','5k_labels.txt'),('10k_tweets.txt','10k_labels.txt'),('20k_tweets.txt','20k_labels.txt'),('30k_tweets.txt','30k_labels.txt'),('40k_tweets.txt','40k_labels.txt'),('tweets_us.json.text','tweets_us.json.labels')]
 
 def main():
-    for set in datalabelpairs:
-        print "===============================", set
-        test(set[0],set[1])
+    if len(sys.argv) < 3:
+        print("Wrong number of arguments")
+        exit()
+
+    data = sys.argv[1]
+    labels = sys.argv[2]
+    test(data,labels)
 
 
 if __name__ == "__main__":
