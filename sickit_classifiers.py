@@ -38,6 +38,7 @@ def test(usdata,uslabel):
 
     start_t = time.time()
     
+    # classifiers
     # clf = MultinomialNB().fit(X_train_tfidf, target)
     # clf = SGDClassifier().fit(X_train_tfidf, target)
     # clf = svm.SVC().fit(X_train_tfidf, target)
@@ -72,26 +73,6 @@ def test(usdata,uslabel):
     elapsed = end_t - start_t
     print("training time", trainingtime)
     print("elapsed time", elapsed)
-    # X_new_counts = count_vect.transform(docs_test)
-    # X_new_tfidf = tfidf_transformer.transform(X_new_counts)
-
-    # predicted1 = nb_clf.predict(X_new_tfidf)
-    # predicted2 = sgd_clf.predict(X_new_tfidf)
-    # predicted3 = svm_clf.predict(X_new_tfidf)
-    # predicted4 = lr_clf.predict(X_new_tfidf)
-    # predicted5 = knn_clf.predict(X_new_tfidf)
-    # predicted6 = dt_clf.predict(X_new_tfidf)
-    # predicted7 = nn_clf.predict(X_new_tfidf)
-
-    # print "accuracy NB: ", np.mean(predicted1 == target_test)
-    # print "accuracy Stochiastic Gradient Descent: ", np.mean(predicted2 == target_test)
-    # print "accuracy SVM: ", np.mean(predicted3 == target_test)
-    # print "accuracy Logistic Regression: ", np.mean(predicted4 == target_test)
-    # print "accuracy Nearest Neighbor: ", np.mean(predicted5 == target_test)
-    # print "accuracy Decision Tree: ", np.mean(predicted6 == target_test)
-    # print "accuracy Neural Networks: ", np.mean(predicted7 == target_test)
-
-#datalabelpairs = [ ('1k_tweets.txt','1k_labels.txt')]#,('5k_tweets.txt','5k_labels.txt'),('10k_tweets.txt','10k_labels.txt'),('20k_tweets.txt','20k_labels.txt'),('30k_tweets.txt','30k_labels.txt'),('40k_tweets.txt','40k_labels.txt'),('tweets_us.json.text','tweets_us.json.labels')]
 
 def main():
     if len(sys.argv) < 3:
