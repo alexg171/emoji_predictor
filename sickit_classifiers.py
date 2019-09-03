@@ -18,22 +18,23 @@ from sklearn import metrics
 import joblib
 
 
-def test(usdata,uslabel):
-    a = open(usdata, encoding="utf8")
-    b = open(uslabel, encoding="utf8")
-    c = open(usdata, encoding="utf8")
+
+def test(data,labels):
+    tweets = open(data, encoding="utf8")
+    emojis = open(labels, encoding="utf8")
+    tweets_orig = open(data, encoding="utf8")
 
     count_vect = CountVectorizer()
-    X_train_counts = count_vect.fit_transform(a)
+    term_doc_matrix = count_vect.fit_transform(tweets)
 
     print("***********************")
     print("Count")
 
     tfidf_transformer = TfidfTransformer()
-    X_train_tfidf = tfidf_transformer.fit_transform(X_train_counts)
+    X_train_tfidf = tfidf_transformer.fit_transform(term_doc_matrix)
 
     target = []
-    for line in b.readlines():
+    for line in emojis.readlines():
         target.append(int(line.strip()))
 
     start_t = time.time()
@@ -51,11 +52,11 @@ def test(usdata,uslabel):
     trainingtime = end_t - start_t
 
     test = []
-    for line in c.readlines():
+    for line in tweets_orig.readlines():
         test.append(line.strip())
 
     print(clf)
-    print(usdata)
+    print(data)
     start_t = time.time()
 
     for i in range(10):
