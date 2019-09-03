@@ -66,11 +66,11 @@ def test(data, labels, clffile):
     tweets = filetoarray(open(data, encoding="utf8"))
     emojis = filetoarray(open(labels, encoding="utf8"))
 
-    test_vect = CountVectorizer()
-    test_transformer = TfidfTransformer()
-
-    test_tdm = test_vect.fit_transform(tweets)
-    test_tidf = test_transformer.fit_transform(test_tdm)
+    # fit data
+    count_vect = CountVectorizer()
+    tfidf_transform = TfidfTransformer()
+    tdm = count_vect.fit_transform(tweets)
+    tfidf_transform.fit_transform(tdm)
 
     # load classifier
     clf = joblib.load(clffile)
@@ -85,8 +85,8 @@ def test(data, labels, clffile):
 
         docs_test = tweets[start:end]
         target_test = emojis[start:end]
-        test_tdm = test_vect.transform(docs_test)
-        test_normalized_tdm = test_transformer.transform(test_tdm)
+        tdm = count_vect.transform(docs_test)
+        test_normalized_tdm = tfidf_transform.transform(tdm)
         predicted = clf.predict(test_normalized_tdm)
 
         print("Accuracy: ", np.mean(predicted == target_test))
