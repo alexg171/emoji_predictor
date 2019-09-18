@@ -40,13 +40,13 @@ def test(data,labels):
     start_t = time.time()
     
     # classifiers
-    # clf = MultinomialNB().fit(X_train_tfidf, target)
+    clf = MultinomialNB().fit(X_train_tfidf, target)
     # clf = SGDClassifier().fit(X_train_tfidf, target)
     # clf = svm.SVC().fit(X_train_tfidf, target)
     # clf = LogisticRegression().fit(X_train_tfidf, target)
     # clf = KNeighborsClassifier().fit(X_train_tfidf, target)
     # clf = DecisionTreeClassifier().fit(X_train_tfidf, target)
-    clf = MLPClassifier().fit(X_train_tfidf, target)
+    # clf = MLPClassifier().fit(X_train_tfidf, target)
     
     end_t = time.time()
     trainingtime = end_t - start_t
